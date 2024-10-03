@@ -1,0 +1,56 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #FAF0E6; /* Background color */
+    font-family: Arial, sans-serif;
+}
+
+.image-container {
+    border: 2px solid #ccc;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 80%;
+    overflow: hidden; /* Ensures the image stays inside the container when scaling */
+}
+
+/* Make the image responsive */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add smooth transition effect */
+}
+
+/* Hover effect: scale image and change opacity */
+.image-container:hover .responsive-image {
+    transform: scale(1.05); /* Slightly zooms the image */
+    opacity: 0.9; /* Slight opacity change */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .image-container {
+        width: 90%;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        width: 95%;
+        padding: 5px;
+    }
+}
